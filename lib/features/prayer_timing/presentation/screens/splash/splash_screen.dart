@@ -1,12 +1,12 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
-import 'package:prayer_timing/core/managers/color_manager.dart';
 import 'package:prayer_timing/core/managers/constants_manager.dart';
-import 'package:prayer_timing/core/managers/routes_manager.dart';
+
+import '../../../../../core/managers/color_manager.dart';
+import '../../../../../core/managers/routes_manager.dart';
 
 class SplashView extends StatefulWidget {
-  const SplashView({super.key});
+  const SplashView({Key? key}) : super(key: key);
 
   @override
   State<SplashView> createState() => _SplashViewState();
@@ -14,13 +14,9 @@ class SplashView extends StatefulWidget {
 
 class _SplashViewState extends State<SplashView> {
   Timer? _timer;
+
   _startDelay() {
-    _timer = Timer(
-      const Duration(
-        seconds: AppConstantas.splashDelay,
-      ),
-      _goNext(),
-    );
+    _timer = Timer(const Duration(seconds: AppConstantas.splashDelay), _goNext);
   }
 
   _goNext() {

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:prayer_timing/features/prayer_timing/presentation/screens/home/home_screen.dart';
-import 'package:prayer_timing/features/prayer_timing/presentation/screens/home/splash/splah_screen.dart';
+
+import '../../features/prayer_timing/presentation/screens/home/home_screen.dart';
+import '../../features/prayer_timing/presentation/screens/splash/splash_screen.dart';
 
 class Routes {
   static const String splashRoute = "/";
@@ -13,7 +14,7 @@ class RouteGenerator {
       case Routes.splashRoute:
         return MaterialPageRoute(builder: (_) => const SplashView());
       case Routes.home:
-        return MaterialPageRoute(builder: (_) => const Home());
+        return MaterialPageRoute(builder: (_) => const HomeView());
       default:
         return unDefinedRoute();
     } // switch
