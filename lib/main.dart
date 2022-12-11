@@ -1,7 +1,7 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
 import 'package:prayer_timing/bloc_observer.dart';
-import 'package:prayer_timing/core/managers/routes_manager.dart';
+import 'core/routes_manager.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();

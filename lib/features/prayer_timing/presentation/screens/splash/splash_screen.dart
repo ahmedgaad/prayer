@@ -1,9 +1,10 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:prayer_timing/core/managers/constants_manager.dart';
-
-import '../../../../../core/managers/color_manager.dart';
-import '../../../../../core/managers/routes_manager.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:prayer_timing/core/assets_manager.dart';
+import '../../../../../core/color_manager.dart';
+import '../../../../../core/constants_manager.dart';
+import '../../../../../core/routes_manager.dart';
 
 class SplashView extends StatefulWidget {
   const SplashView({Key? key}) : super(key: key);
@@ -40,6 +41,14 @@ class _SplashViewState extends State<SplashView> {
           ],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
+        ),
+      ),
+      child: Center(
+        child: SvgPicture.asset(
+          ImageAssetsManager.splashLogo,
+          fit: BoxFit.scaleDown,
+          width: 180,
+          height: 180,
         ),
       ),
     );
