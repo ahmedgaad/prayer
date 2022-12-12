@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
-import 'package:prayer_timing/bloc_observer.dart';
+import 'bloc_observer.dart';
 import 'core/routes_manager.dart';
 
 void main() {

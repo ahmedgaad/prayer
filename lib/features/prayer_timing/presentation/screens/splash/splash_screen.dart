@@ -3,7 +3,7 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:prayer_timing/core/assets_manager.dart';
+import '../../../../../core/assets_manager.dart';
 import '../../../../../core/color_manager.dart';
 import '../../../../../core/constants_manager.dart';
 import '../../../../../core/routes_manager.dart';
