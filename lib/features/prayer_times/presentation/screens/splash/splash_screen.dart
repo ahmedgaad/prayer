@@ -3,10 +3,10 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-import '../../../../../core/assets_manager.dart';
-import '../../../../../core/color_manager.dart';
-import '../../../../../core/constants_manager.dart';
-import '../../../../../core/routes_manager.dart';
+import '../../../../../core/utils/assets_manager.dart';
+import '../../../../../core/utils/color_manager.dart';
+import '../../../../../core/utils/constants_manager.dart';
+import '../../../../../core/utils/routes_manager.dart';
 
 class SplashView extends StatefulWidget {
   const SplashView({Key? key}) : super(key: key);

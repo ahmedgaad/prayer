@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../features/prayer_timing/presentation/screens/home/home_screen.dart';
-import '../../features/prayer_timing/presentation/screens/splash/splash_screen.dart';
+import '../../../features/prayer_times/presentation/screens/home/home_screen.dart';
+import '../../../features/prayer_times/presentation/screens/splash/splash_screen.dart';
 
 class Routes {
   static const String splashRoute = "/";

@@ -30,15 +30,21 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   animated_text_kit: ^4.2.2
-  bloc: ^8.1.0
+  build_runner: ^2.3.2
   cupertino_icons: ^1.0.2
   dartz: ^0.10.1
   dio: ^4.0.6
+  equatable: ^2.0.5
   flutter:
     sdk: flutter
   flutter_bloc: ^8.1.1
   flutter_svg: ^1.1.6
+  get_it: ^7.2.0
   google_fonts: ^3.0.1
+  json_annotation: ^4.7.0
+  json_serializable: ^6.5.4
+  retrofit: ^3.3.1
+  retrofit_generator: ^4.2.0
   shared_preferences: ^2.0.15
 
 dev_dependencies:

@@ -1,10 +1,12 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:prayer_timing/injection_container.dart';
 import 'bloc_observer.dart';
-import 'core/routes_manager.dart';
+import 'core/utils/routes_manager.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
+  initializeInjector();
   Bloc.observer = MyBlocObserver();
   runApp(const MyApp());
 }
