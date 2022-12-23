@@ -7,7 +7,9 @@ import 'package:prayer_timing/features/prayer_times/presentation/screens/home/cu
 import 'package:table_calendar/table_calendar.dart';
 
 class HomeView extends StatelessWidget {
-  const HomeView({super.key});
+  HomeView({super.key});
+
+  DateTime today = DateTime.now();
 
   @override
   Widget build(BuildContext context) {
@@ -18,14 +20,20 @@ class HomeView extends StatelessWidget {
           "Prayer Times",
           style: GoogleFonts.lato(),
         ),
+        centerTitle: false,
         elevation: 0.0,
       ),
       body: Column(
         children: [
           Container(
             child: TableCalendar(
+              headerStyle: const HeaderStyle(
+                formatButtonVisible: false,
+                titleCentered: true,
+              ),
+              availableGestures: AvailableGestures.all,
               locale: "en_US",
-              focusedDay: AppCubit.get(context).today,
+              focusedDay: today,
               firstDay: DateTime.utc(2001, 7, 26),
               lastDay: DateTime.utc(2050, 7, 26),
             ),
