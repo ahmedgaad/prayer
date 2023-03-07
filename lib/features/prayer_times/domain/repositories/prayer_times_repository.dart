@@ -1,12 +1,12 @@
-import 'package:prayer_timing/features/prayer_times/data/models/prayer_times_model.dart';
+import 'package:dartz/dartz.dart';
+import 'package:prayer_timing/core/errors/failures.dart';
+import 'package:prayer_timing/features/prayer_times/domain/entities/prayer_times.dart';
 
 abstract class PrayerTimesRepository {
-  Future<PrayerTimesModel> getPrayerTimes(
-    String day,
-    Month month,
-    String year,
+  Future<Either<Failure, PrayerTimes>> getPrayerTimes(
     double latitude,
     double longitude,
-    int method
+    int year,
+    int month,
   );
 }
