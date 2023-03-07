@@ -7,7 +7,7 @@ import 'package:dartz/dartz.dart';
 import 'package:prayer_timing/features/prayer_times/domain/repositories/prayer_times_repository.dart';
 
 class PrayerTimesRepositoryImpl implements PrayerTimesRepository {
-  final PrayerTimesDataSource prayerTimesDataSource;
+  final PrayerTimesRemoteDataSource prayerTimesDataSource;
   final NetworkInfo networkInfo;
 
   PrayerTimesRepositoryImpl({
@@ -21,10 +21,10 @@ class PrayerTimesRepositoryImpl implements PrayerTimesRepository {
     try {
       if (await networkInfo.isConnected) {
         final result = await prayerTimesDataSource.getPrayerTimes(
-          latitude,
-          longitude,
-          year,
-          month,
+          latitude: latitude,
+          longitude: longitude,
+          year: year,
+          month: month,
         );
         return Right(result);
       } else {

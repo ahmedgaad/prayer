@@ -4,6 +4,7 @@ import 'package:internet_connection_checker/internet_connection_checker.dart';
 import 'package:prayer_timing/core/helpers/bloc_observer.dart';
 import 'package:prayer_timing/core/network/netwok_info.dart';
 import 'package:prayer_timing/core/services/service_locator.dart';
+import 'package:prayer_timing/features/prayer_times/data/data_sources/remote_datasource.dart';
 import 'package:prayer_timing/features/prayer_times/data/repositories/prayer_times_repository_impl.dart';
 import 'package:prayer_timing/features/prayer_times/domain/repositories/prayer_times_repository.dart';
 import 'package:prayer_timing/features/prayer_times/domain/use_cases/get_prayer_times_usecase.dart';
@@ -15,7 +16,7 @@ void main() async {
   initializeInjector();
   Bloc.observer = MyBlocObserver();
   NetworkInfo networkInfo = NetworkInfoImpl(InternetConnectionChecker());
-  PrayerTimesDataSource prayerTimesDataSource = PrayerTimesDataSourceImpl();
+  PrayerTimesRemoteDataSource prayerTimesDataSource = PrayerTimesRemoteDataSourceImpl();
   PrayerTimesRepository prayerTimesRepository = PrayerTimesRepositoryImpl(
       networkInfo: networkInfo, prayerTimesDataSource: prayerTimesDataSource);
   GetPrayerTimesUsecase(prayerTimesRepository).execute(

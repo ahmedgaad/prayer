@@ -13,6 +13,8 @@ class PrayerTimesModel extends PrayerTimes {
 
   factory PrayerTimesModel.fromJson(Map<String, dynamic> json) =>
       PrayerTimesModel(
+        status: json['status'],
+        statusCode: json['code'],
         fajr: json['data'][0]['timings']['Fajr'],
         duhr: json['data'][0]['timings']['Dhuhr'],
         asr: json['data'][0]['timings']['Asr'],
